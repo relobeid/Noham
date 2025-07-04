@@ -22,7 +22,7 @@ export default function DashboardPage() {
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
+            <div className="logo-container">
               <Image
                 src="/logo.png"
                 alt="NoHam Logo"
@@ -30,7 +30,7 @@ export default function DashboardPage() {
                 height={32}
                 className="mr-2"
               />
-              <span className="font-bold text-xl gradient-text">NoHam</span>
+              <span className="logo-text">NoHam</span>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-gray-700">
@@ -56,7 +56,7 @@ export default function DashboardPage() {
                 <p className="text-gray-600 mb-4">
                   Upload a resume and GitHub profile to begin trust analysis
                 </p>
-                <Button className="w-full hero-gradient text-white">
+                <Button className="w-full btn-brand">
                   New Scan
                 </Button>
               </CardContent>

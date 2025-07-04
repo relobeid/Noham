@@ -50,6 +50,15 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // NoHam brand colors
+        brand: {
+          orange: "#ff6b35",
+          "orange-light": "#ff8c5c",
+          "orange-dark": "#e55a2b",
+          black: "#2c1810",
+          "black-light": "#4a2d1f",
+          "black-dark": "#1a0e08",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

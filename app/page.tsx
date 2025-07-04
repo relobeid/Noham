@@ -10,7 +10,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-        <div className="flex items-center justify-center">
+        <div className="logo-container">
           <Image
             src="/logo.png"
             alt="NoHam Logo"
@@ -18,7 +18,7 @@ export default function HomePage() {
             height={32}
             className="mr-2"
           />
-          <span className="font-bold text-xl gradient-text">NoHam</span>
+          <span className="logo-text">NoHam</span>
         </div>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Button variant="ghost" size="sm">
@@ -31,7 +31,7 @@ export default function HomePage() {
             About
           </Button>
           <Link href="/auth/signin">
-            <Button size="sm">Get Started</Button>
+            <Button size="sm" className="btn-brand">Get Started</Button>
           </Link>
         </nav>
       </header>
@@ -52,7 +52,7 @@ export default function HomePage() {
             </div>
             <div className="space-x-4">
               <Link href="/auth/signin">
-                <Button size="lg" className="hero-gradient text-white">
+                <Button size="lg" className="btn-brand">
                   Start Free Trial
                 </Button>
               </Link>
@@ -164,7 +164,7 @@ export default function HomePage() {
                   Start Free Trial
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-brand-black">
                 Contact Sales
               </Button>
             </div>

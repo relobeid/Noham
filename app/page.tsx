@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, FileText, Github, Users, Zap, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
@@ -29,7 +30,9 @@ export default function HomePage() {
           <Button variant="ghost" size="sm">
             About
           </Button>
-          <Button size="sm">Get Started</Button>
+          <Link href="/auth/signin">
+            <Button size="sm">Get Started</Button>
+          </Link>
         </nav>
       </header>
 
@@ -48,9 +51,11 @@ export default function HomePage() {
               </p>
             </div>
             <div className="space-x-4">
-              <Button size="lg" className="hero-gradient text-white">
-                Start Free Trial
-              </Button>
+              <Link href="/auth/signin">
+                <Button size="lg" className="hero-gradient text-white">
+                  Start Free Trial
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 Watch Demo
               </Button>
@@ -154,9 +159,11 @@ export default function HomePage() {
               </p>
             </div>
             <div className="space-x-4">
-              <Button size="lg" variant="secondary">
-                Start Free Trial
-              </Button>
+              <Link href="/auth/signin">
+                <Button size="lg" variant="secondary">
+                  Start Free Trial
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
                 Contact Sales
               </Button>

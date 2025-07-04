@@ -32,10 +32,10 @@
   - [x] Create initial database schema (users, scans, reports)
   - [x] Run first migration
 
-- [ ] **Authentication System** (1h)
-  - Implement NextAuth.js with email/password
-  - Add Google OAuth provider
-  - Create protected routes middleware
+- [x] **Authentication System** (1h)
+  - [x] Implement NextAuth.js with email/password
+  - [x] Add Google OAuth provider
+  - [x] Create protected routes middleware
 
 #### Afternoon (4 hours)
 - [ ] **Basic UI Components** (2h)

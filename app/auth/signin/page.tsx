@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import { Mail } from 'lucide-react';
 
 export default function SignInPage() {
   const [providers, setProviders] = useState<any>(null);
@@ -28,7 +29,7 @@ export default function SignInPage() {
             className="mx-auto"
           />
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Sign in to <span className="gradient-text">NoHam</span>
+            Sign in to <span className="logo-text">NoHam</span>
           </h2>
           <p className="mt-2 text-sm text-gray-600">
             Say No To Sohams - Trust Layer for Remote Hiring
@@ -68,7 +69,8 @@ export default function SignInPage() {
                       className="w-full"
                       variant="outline"
                     >
-                      📧 Continue with Email
+                      <Mail className="w-5 h-5 mr-2" />
+                      Continue with Email
                     </Button>
                   )}
                 </div>

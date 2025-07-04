@@ -20,17 +20,17 @@
 **Theme**: Get the infrastructure rock-solid
 
 #### Morning (4 hours)
-- [ ] **Project Initialization** (1h)
-  - Create Next.js 14 project with TypeScript
-  - Set up Tailwind CSS and basic styling
-  - Configure ESLint, Prettier
-  - Initialize Git repository
+- [x] **Project Initialization** (1h)
+  - [x] Create Next.js 14 project with TypeScript
+  - [x] Set up Tailwind CSS and basic styling
+  - [x] Configure ESLint, Prettier
+  - [x] Initialize Git repository
 
-- [ ] **Database Setup** (2h)
-  - Set up PostgreSQL database (local + cloud)
-  - Configure Prisma ORM
-  - Create initial database schema (users, scans, reports)
-  - Run first migration
+- [x] **Database Setup** (2h)
+  - [x] Set up PostgreSQL database (local + cloud)
+  - [x] Configure Prisma ORM
+  - [x] Create initial database schema (users, scans, reports)
+  - [x] Run first migration
 
 - [ ] **Authentication System** (1h)
   - Implement NextAuth.js with email/password

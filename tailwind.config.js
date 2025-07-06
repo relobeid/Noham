@@ -50,14 +50,16 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // NoHam brand colors
+        // NoHam brand colors - matte slate system
         brand: {
-          orange: "#ff6b35",
-          "orange-light": "#ff8c5c",
-          "orange-dark": "#e55a2b",
-          black: "#2c1810",
-          "black-light": "#4a2d1f",
-          "black-dark": "#1a0e08",
+          copper: "#e35238",
+          "copper-light": "#f06b4a",
+          "copper-dark": "#c8462b",
+          slate: "#1b1e23",
+          "slate-light": "#2a2d32",
+          "slate-medium": "#3a3e44",
+          "slate-dark": "#151619",
+          white: "#ffffff",
         },
       },
       borderRadius: {

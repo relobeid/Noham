@@ -5,64 +5,64 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 5% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 5% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 5% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 5% 12%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 5% 96%;
+    --secondary-foreground: 210 5% 12%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 5% 96%;
+    --muted-foreground: 210 5% 45%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 5% 96%;
+    --accent-foreground: 210 5% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 5% 90%;
+    --input: 210 5% 90%;
+    --ring: 210 5% 12%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 5% 12%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 5% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 5% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 210 5% 12%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 5% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 5% 15%;
+    --muted-foreground: 210 5% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 5% 15%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 5% 15%;
+    --input: 210 5% 15%;
+    --ring: 0 0% 83%;
   }
 }
 
@@ -75,61 +75,145 @@
   }
 }
 
-/* Custom styles for NoHam brand */
-.gradient-text {
-  background: linear-gradient(135deg, #ff6b35 0%, #2c1810 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* NoHam Brand System - Matte Slate */
+.brand-copper {
+  color: #e35238;
 }
 
-.hero-gradient {
-  background: linear-gradient(135deg, #ff6b35 0%, #2c1810 100%);
+.bg-brand-copper {
+  background-color: #e35238;
 }
 
-/* Brand color utilities */
-.text-brand-orange {
-  color: #ff6b35;
+.brand-slate {
+  color: #1b1e23;
 }
 
-.text-brand-black {
-  color: #2c1810;
+.bg-brand-slate {
+  background-color: #1b1e23;
 }
 
-.bg-brand-orange {
-  background-color: #ff6b35;
+.bg-brand-slate-light {
+  background-color: #2a2d32;
 }
 
-.bg-brand-black {
-  background-color: #2c1810;
+.bg-brand-slate-medium {
+  background-color: #3a3e44;
 }
 
-/* Logo styling improvements */
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-text {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  background: linear-gradient(135deg, #ff6b35 0%, #2c1810 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Professional button styling */
-.btn-brand {
-  background: linear-gradient(135deg, #ff6b35 0%, #2c1810 100%);
+/* Button Styles */
+.btn-primary {
+  background-color: #e35238;
   color: white;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
 
-.btn-brand:hover {
-  background: linear-gradient(135deg, #e55a2b 0%, #1a0e08 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+.btn-primary:hover {
+  background-color: #c8462b;
+  box-shadow: 0 10px 15px -3px rgba(227, 82, 56, 0.25), 0 4px 6px -2px rgba(227, 82, 56, 0.05);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #1b1e23;
+  border: 1px solid rgba(27, 30, 35, 0.2);
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(27, 30, 35, 0.05);
+}
+
+.btn-dark {
+  background-color: #1b1e23;
+  color: white;
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-dark:hover {
+  background-color: #2a2d32;
+}
+
+/* Typography */
+.text-hero {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1b1e23;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 3.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-hero {
+    font-size: 4.5rem;
+  }
+}
+
+.text-subhero {
+  font-size: 1.125rem;
+  color: rgba(27, 30, 35, 0.7);
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .text-subhero {
+    font-size: 1.25rem;
+  }
+}
+
+.text-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1b1e23;
+}
+
+@media (min-width: 768px) {
+  .text-section-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Logo */
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e35238;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-0.25rem);
 } 

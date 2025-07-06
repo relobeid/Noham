@@ -3,12 +3,16 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { AuthSessionProvider } from '@/components/providers/session-provider';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'NoHam - Say No To Sohams',
-  description: 'Trust Layer for Remote Hiring - Detect hiring risks through resume and GitHub analysis',
-  keywords: ['hiring', 'trust', 'remote work', 'background check', 'github analysis', 'resume parsing'],
+  title: 'NoHam - Your Trust Layer for Remote Hiring',
+  description: 'NoHam helps founders catch resume red flags and GitHub silence before they hire their next engineer.',
+  keywords: ['hiring', 'trust', 'remote work', 'background check', 'github analysis', 'resume verification', 'founder tools'],
   authors: [{ name: 'NoHam Team' }],
   creator: 'NoHam Team',
   publisher: 'NoHam',
@@ -19,8 +23,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://noham.dev'),
   openGraph: {
-    title: 'NoHam - Say No To Sohams',
-    description: 'Trust Layer for Remote Hiring - Detect hiring risks through resume and GitHub analysis',
+    title: 'NoHam - Your Trust Layer for Remote Hiring',
+    description: 'NoHam helps founders catch resume red flags and GitHub silence before they hire their next engineer.',
     url: 'https://noham.dev',
     siteName: 'NoHam',
     images: [
@@ -36,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NoHam - Say No To Sohams',
-    description: 'Trust Layer for Remote Hiring - Detect hiring risks through resume and GitHub analysis',
+    title: 'NoHam - Your Trust Layer for Remote Hiring',
+    description: 'NoHam helps founders catch resume red flags and GitHub silence before they hire their next engineer.',
     images: ['/logo.png'],
   },
   robots: {
@@ -59,10 +63,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={inter.variable}>
+      <body className={`${inter.className} font-sans antialiased`}>
         <AuthSessionProvider>
-          <div className="min-h-screen bg-background font-sans antialiased">
+          <div className="min-h-screen bg-white">
             {children}
           </div>
         </AuthSessionProvider>

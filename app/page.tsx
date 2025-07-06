@@ -1,5 +1,6 @@
 import Hero from '@/components/landing/Hero';
 import Problem from '@/components/landing/Problem';
+import Story from '@/components/landing/Story';
 import HowItWorks from '@/components/landing/HowItWorks';
 import Preview from '@/components/landing/Preview';
 import CTA from '@/components/landing/CTA';
@@ -10,6 +11,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <Problem />
+      <Story />
       <HowItWorks />
       <Preview />
       <CTA />

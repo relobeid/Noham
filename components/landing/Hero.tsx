@@ -38,6 +38,15 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Status Indicator */}
+      <div className="absolute top-8 left-8 z-50 flex items-center gap-1.5 bg-black/20 backdrop-blur-sm border border-green-500/20 rounded-full px-3 py-1.5">
+        <div className="relative">
+          <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+          <div className="absolute top-0 left-0 w-1.5 h-1.5 bg-green-500 rounded-full animate-ping"></div>
+        </div>
+        <span className="text-green-400 text-xs font-medium tracking-wide">ALL SYSTEMS ONLINE</span>
+      </div>
+      
       {/* Animated Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {particles.map((particle) => (

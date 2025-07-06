@@ -64,9 +64,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className={`${inter.className} font-sans antialiased`}>
+      <body className={`${inter.className} font-sans antialiased bg-brand-slate text-white`}>
         <AuthSessionProvider>
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen bg-brand-slate">
             {children}
           </div>
         </AuthSessionProvider>

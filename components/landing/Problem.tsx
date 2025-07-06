@@ -28,7 +28,7 @@ export default function Problem() {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-brand-slate-light">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -37,8 +37,8 @@ export default function Problem() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-section-title mb-4">Why We Built NoHam</h2>
-          <p className="text-subhero max-w-3xl mx-auto">
+          <h2 className="text-section-title text-white mb-4">Why We Built NoHam</h2>
+          <p className="text-subhero max-w-3xl mx-auto text-white/70">
             Remote hiring is broken. Founders are making expensive mistakes that could be prevented with proper verification.
           </p>
         </motion.div>
@@ -51,17 +51,17 @@ export default function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl border border-brand-slate/10 hover:border-brand-copper/20 transition-all duration-200 hover-lift"
+              className="bg-brand-slate-medium p-8 rounded-xl border border-white/10 hover:border-brand-copper/20 transition-all duration-200 hover-lift"
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-brand-copper/10 rounded-lg flex items-center justify-center text-brand-copper">
                   {problem.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-brand-slate mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">
                     {problem.title}
                   </h3>
-                  <p className="text-brand-slate/70 leading-relaxed">
+                  <p className="text-white/70 leading-relaxed">
                     {problem.description}
                   </p>
                 </div>
@@ -77,9 +77,9 @@ export default function Problem() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex items-center space-x-2 px-6 py-3 bg-brand-copper/5 rounded-full">
+          <div className="inline-flex items-center space-x-2 px-6 py-3 bg-brand-copper/10 rounded-full border border-brand-copper/20">
             <div className="w-2 h-2 bg-brand-copper rounded-full"></div>
-            <span className="text-brand-slate font-medium">
+            <span className="text-white font-medium">
               One bad hire can cost you 3-5x their annual salary
             </span>
           </div>

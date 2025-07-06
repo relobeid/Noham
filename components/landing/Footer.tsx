@@ -7,7 +7,7 @@ import { Twitter, Github } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-brand-slate/10">
+    <footer className="bg-brand-slate py-16 px-4 sm:px-6 lg:px-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export default function Footer() {
               />
               <span className="logo-text text-xl">NoHam</span>
             </div>
-            <p className="text-brand-slate/70 max-w-md">
+            <p className="text-white/70 max-w-md">
               Your trust layer for remote hiring. Catch resume red flags and GitHub silence before you hire.
             </p>
             <div className="flex space-x-4 mt-6">
@@ -36,7 +36,7 @@ export default function Footer() {
                 href="https://twitter.com/nohamdev" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-brand-slate/60 hover:text-brand-copper transition-colors hover-lift"
+                className="text-white/60 hover:text-brand-copper transition-colors hover-lift"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -44,7 +44,7 @@ export default function Footer() {
                 href="https://github.com/nohamdev" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-brand-slate/60 hover:text-brand-copper transition-colors hover-lift"
+                className="text-white/60 hover:text-brand-copper transition-colors hover-lift"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -53,20 +53,20 @@ export default function Footer() {
 
           {/* Product Links */}
           <div>
-            <h4 className="font-semibold text-brand-slate mb-4">Product</h4>
+            <h4 className="font-semibold text-white mb-4">Product</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/features" className="text-brand-slate/70 hover:text-brand-copper transition-colors">
+                <Link href="/features" className="text-white/70 hover:text-brand-copper transition-colors">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-brand-slate/70 hover:text-brand-copper transition-colors">
+                <Link href="/pricing" className="text-white/70 hover:text-brand-copper transition-colors">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/auth/signin" className="text-brand-slate/70 hover:text-brand-copper transition-colors">
+                <Link href="/auth/signin" className="text-white/70 hover:text-brand-copper transition-colors">
                   Get Started
                 </Link>
               </li>
@@ -75,20 +75,20 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-brand-slate mb-4">Company</h4>
+            <h4 className="font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-brand-slate/70 hover:text-brand-copper transition-colors">
+                <Link href="/about" className="text-white/70 hover:text-brand-copper transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-brand-slate/70 hover:text-brand-copper transition-colors">
+                <Link href="/privacy" className="text-white/70 hover:text-brand-copper transition-colors">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-brand-slate/70 hover:text-brand-copper transition-colors">
+                <Link href="/terms" className="text-white/70 hover:text-brand-copper transition-colors">
                   Terms
                 </Link>
               </li>
@@ -101,14 +101,14 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-brand-slate/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
-          <p className="text-sm text-brand-slate/60">
+          <p className="text-sm text-white/60">
             © 2024 NoHam. All rights reserved.
           </p>
-          <div className="flex items-center space-x-6 text-sm text-brand-slate/60">
+          <div className="flex items-center space-x-6 text-sm text-white/60">
             <span>Built for founders, by founders</span>
-            <div className="w-px h-4 bg-brand-slate/20"></div>
+            <div className="w-px h-4 bg-white/20"></div>
             <span>Say no to Sohams</span>
           </div>
         </motion.div>

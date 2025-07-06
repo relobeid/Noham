@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 5% 12%;
+    --background: 210 5% 12%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 5% 12%;
+    --card: 210 5% 15%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 5% 12%;
+    --popover: 210 5% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 5% 12%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 210 5% 12%;
 
-    --secondary: 210 5% 96%;
-    --secondary-foreground: 210 5% 12%;
+    --secondary: 210 5% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 5% 96%;
-    --muted-foreground: 210 5% 45%;
+    --muted: 210 5% 20%;
+    --muted-foreground: 210 5% 65%;
 
-    --accent: 210 5% 96%;
-    --accent-foreground: 210 5% 12%;
+    --accent: 210 5% 20%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 5% 90%;
-    --input: 210 5% 90%;
-    --ring: 210 5% 12%;
+    --border: 210 5% 20%;
+    --input: 210 5% 20%;
+    --ring: 0 0% 83%;
 
     --radius: 0.5rem;
   }
@@ -39,29 +39,29 @@
     --background: 210 5% 12%;
     --foreground: 0 0% 100%;
 
-    --card: 210 5% 12%;
+    --card: 210 5% 15%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 210 5% 12%;
+    --popover: 210 5% 15%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
     --primary-foreground: 210 5% 12%;
 
-    --secondary: 210 5% 15%;
+    --secondary: 210 5% 20%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 5% 15%;
+    --muted: 210 5% 20%;
     --muted-foreground: 210 5% 65%;
 
-    --accent: 210 5% 15%;
+    --accent: 210 5% 20%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 5% 15%;
-    --input: 210 5% 15%;
+    --border: 210 5% 20%;
+    --input: 210 5% 20%;
     --ring: 0 0% 83%;
   }
 }
@@ -72,10 +72,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: #1b1e23;
+    color: #ffffff;
   }
 }
 
-/* NoHam Brand System - Matte Slate */
+/* NoHam Brand System - Matte Slate Dark */
 .brand-copper {
   color: #e35238;
 }
@@ -85,7 +87,7 @@
 }
 
 .brand-slate {
-  color: #1b1e23;
+  color: #ffffff;
 }
 
 .bg-brand-slate {
@@ -117,8 +119,8 @@
 
 .btn-secondary {
   background-color: transparent;
-  color: #1b1e23;
-  border: 1px solid rgba(27, 30, 35, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   font-weight: 500;
   padding: 0.625rem 1.5rem;
   border-radius: 0.5rem;
@@ -126,7 +128,7 @@
 }
 
 .btn-secondary:hover {
-  background-color: rgba(27, 30, 35, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .btn-dark {
@@ -146,7 +148,7 @@
 .text-hero {
   font-size: 3rem;
   font-weight: 700;
-  color: #1b1e23;
+  color: #ffffff;
   line-height: 1.1;
 }
 
@@ -164,7 +166,7 @@
 
 .text-subhero {
   font-size: 1.125rem;
-  color: rgba(27, 30, 35, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.625;
 }
 
@@ -177,7 +179,7 @@
 .text-section-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1b1e23;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -207,6 +209,54 @@
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
+}
+
+/* Particle animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-180deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.particle {
+  position: absolute;
+  background: #e35238;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle-1 {
+  width: 6px;
+  height: 6px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particle-2 {
+  width: 4px;
+  height: 4px;
+  animation: float-delayed 8s ease-in-out infinite;
+}
+
+.particle-3 {
+  width: 8px;
+  height: 8px;
+  animation: pulse-glow 4s ease-in-out infinite;
 }
 
 /* Hover effects */

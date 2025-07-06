@@ -3,11 +3,112 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+interface Particle {
+  id: number;
+  x: number;
+  y: number;
+  size: number;
+  delay: number;
+  duration: number;
+}
 
 export default function Hero() {
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    const generateParticles = () => {
+      const newParticles: Particle[] = [];
+      for (let i = 0; i < 25; i++) {
+        newParticles.push({
+          id: i,
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          size: Math.random() * 6 + 2,
+          delay: Math.random() * 5,
+          duration: Math.random() * 10 + 8,
+        });
+      }
+      setParticles(newParticles);
+    };
+
+    generateParticles();
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Animated Particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        {particles.map((particle) => (
+          <motion.div
+            key={particle.id}
+            className="absolute bg-brand-copper rounded-full opacity-20"
+            style={{
+              left: `${particle.x}%`,
+              top: `${particle.y}%`,
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              x: [0, Math.random() * 20 - 10, 0],
+              opacity: [0.2, 0.6, 0.2],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: particle.duration,
+              delay: particle.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Floating Orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-16 h-16 bg-brand-copper rounded-full opacity-10 blur-xl"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.1, 0.3, 0.1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute top-3/4 right-1/4 w-20 h-20 bg-brand-copper rounded-full opacity-10 blur-xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.4, 0.1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-12 h-12 bg-brand-copper rounded-full opacity-10 blur-xl"
+          animate={{
+            scale: [1, 1.8, 1],
+            opacity: [0.1, 0.5, 0.1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4,
+          }}
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <motion.div
@@ -55,7 +156,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex items-center space-x-4 text-sm text-brand-slate/60"
+              className="flex items-center space-x-4 text-sm text-white/60"
             >
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-brand-copper rounded-full"></div>
@@ -76,7 +177,7 @@ export default function Hero() {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-brand-copper/10 rounded-full blur-3xl scale-150"></div>
+              <div className="absolute inset-0 bg-brand-copper/20 rounded-full blur-3xl scale-150 animate-pulse"></div>
               <Image
                 src="/logo.png"
                 alt="NoHam Logo"
@@ -98,7 +199,7 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="flex flex-col items-center space-y-2">
-          <div className="w-px h-16 bg-brand-slate/20"></div>
+          <div className="w-px h-16 bg-white/20"></div>
           <div className="w-1 h-1 bg-brand-copper rounded-full animate-pulse"></div>
         </div>
       </motion.div>

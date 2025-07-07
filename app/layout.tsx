@@ -21,6 +21,23 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '64x64', type: 'image/png' },
+      { url: '/logo.png', sizes: '96x96', type: 'image/png' },
+    ],
+    shortcut: '/logo.png',
+    apple: [
+      { url: '/logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo.png', sizes: '512x512', type: 'image/png' },
+    ],
+    other: [
+      { url: '/logo.png', sizes: '96x96', type: 'image/png' },
+    ],
+  },
   metadataBase: new URL('https://noham.dev'),
   openGraph: {
     title: 'NoHam - Your Trust Layer for Remote Hiring',

@@ -74,7 +74,7 @@ export default function Story() {
                 viewport={{ once: true }}
                 className="text-lg text-white/80 leading-relaxed"
               >
-                That night, I made a promise: <span className="text-brand-copper font-semibold">No founder should go through this.</span> 
+                That night, I made a promise: <span className="text-brand-copper font-semibold">No founder should go through this.</span> {' '}
                 NoHam was born from that frustration, that betrayal, and the determination to help early-stage 
                 startups avoid the Sohams of the world.
               </motion.p>

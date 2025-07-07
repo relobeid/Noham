@@ -93,16 +93,24 @@ export default function CTA() {
           <motion.button
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(227, 82, 56, 0.3)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-12 py-5 bg-gradient-to-r from-brand-copper to-brand-copper-light text-white font-semibold rounded-2xl text-lg shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+            transition={{ 
+              duration: 0.6, 
+              delay: 0.6,
+              scale: { duration: 0.15 },
+              boxShadow: { duration: 0.15 }
+            }}
+            className="group relative px-12 py-5 bg-gradient-to-r from-brand-copper to-brand-copper-light text-white font-semibold rounded-2xl text-lg shadow-xl overflow-hidden"
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+              className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full"
+              animate={{ x: "-100%" }}
+              whileHover={{ x: "100%" }}
+              transition={{ duration: 0.4 }}
             />
             <div className="relative flex items-center space-x-3">
               <Zap className="w-6 h-6" />
@@ -119,13 +127,20 @@ export default function CTA() {
           <motion.button
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
             whileHover={{ 
               scale: 1.05,
-              backgroundColor: "rgba(227, 82, 56, 0.1)"
+              backgroundColor: "rgba(227, 82, 56, 0.1)",
+              borderColor: "rgba(227, 82, 56, 0.5)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="group px-12 py-5 border-2 border-brand-copper/30 hover:border-brand-copper/50 text-white font-semibold rounded-2xl text-lg backdrop-blur-sm transition-all duration-300 hover:bg-brand-copper/10"
+            transition={{ 
+              duration: 0.6, 
+              delay: 0.8,
+              scale: { duration: 0.15 },
+              backgroundColor: { duration: 0.15 },
+              borderColor: { duration: 0.15 }
+            }}
+            className="group px-12 py-5 border-2 border-brand-copper/30 text-white font-semibold rounded-2xl text-lg backdrop-blur-sm"
           >
             <div className="flex items-center space-x-3">
               <Shield className="w-6 h-6 text-brand-copper" />

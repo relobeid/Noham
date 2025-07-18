@@ -1,7 +1,7 @@
 # NoHam - Trust Layer for Remote Hiring
 
 <div align="center">
-  <img src="logo.png" alt="Noham Logo" width="120" height="120">
+  <img src="/public/logo.png" alt="Noham Logo" width="120" height="120">
   
   <h3>Say No To Sohams</h3>
   
